@@ -116,20 +116,23 @@ body {
 }
 
 .page-header h1 {
-  font-size: clamp(20px, 4vw, 28px);
+  font-size: clamp(18px, 5vw, 28px);
   font-weight: 900;
-  line-height: 1.35;
+  line-height: 1.45;
   letter-spacing: -0.02em;
   color: var(--white);
   margin-bottom: 10px;
   position: relative; z-index: 1;
+  word-break: keep-all;
+  overflow-wrap: break-word;
 }
 
 .page-header p {
-  font-size: 13px;
+  font-size: clamp(12px, 3.5vw, 13px);
   color: rgba(255,255,255,0.8);
   line-height: 1.7;
   position: relative; z-index: 1;
+  word-break: keep-all;
 }
 
 /* ── プログレス ── */
@@ -490,7 +493,7 @@ input[type=range]::-webkit-slider-thumb {
 <!-- ページヘッダー -->
 <div class="page-header">
   <div class="page-header-label">Salesforce入力コスト 損失額診断</div>
-  <h1>あなたの会社のSalesforce入力、<br>年間いくらの損失額になっていますか？</h1>
+  <h1>あなたの会社のSalesforce入力、年間いくらの損失額になっていますか？</h1>
   <p>項目を入力するだけで、見えていない損失額を概算でご確認いただけます。</p>
 </div>
 
@@ -615,7 +618,7 @@ input[type=range]::-webkit-slider-thumb {
 
     <!-- CTA -->
     <div class="appo-card" id="appo-section" style="animation-delay:.55s; text-align:center; padding: 32px 26px;">
-      <div class="card-title" style="font-size:19px; margin-bottom:10px">この損失額、どこまで削減できるか<br>相談してみませんか？</div>
+      <div class="card-title" style="font-size:clamp(16px, 4.5vw, 19px); margin-bottom:10px; word-break:keep-all; overflow-wrap:break-word;">この損失額、どこまで削減できるか相談してみませんか？</div>
       <a href="https://bsai.bellface.co.jp/documents/y648mux7-m?draftKey=akj7v7SMWi" target="_blank" rel="noopener" class="btn-primary" style="display:inline-block; text-decoration:none; padding: 16px 40px; font-size:16px; max-width:320px; width:100%">
         無料相談してみる
       </a>
@@ -626,13 +629,13 @@ input[type=range]::-webkit-slider-thumb {
 
 <script>
 const INSIGHTS = {
-  bank:        '株式会社肥後銀行では面談記録作成時間が<strong>60分→20分（67%削減）</strong>を達成。株式会社池田泉州銀行でも金融商品取引法に基づく交渉記録の作成負担を解消し、<strong>客観的かつ網羅的な記録</strong>を全店で実現しています。',
-  securities:  'ほくほくTT証券株式会社ではCRM入力作業を<strong>約30%削減、月間3〜6時間の時間創出</strong>に成功。池田泉州TT証券株式会社でも面談記録作成時間を大幅削減し、より多くの顧客と接する機会を創出しています。',
-  insurance:   '株式会社カカクコム・インシュアランスでは、コンサルタントの活動内容をAIが自動記録・構造化しSalesforceへ自動連携。<strong>顧客記録表作成の工数削減</strong>と、営業担当者がお客さまとの対話に集中できる環境を実現しています。',
-  leasing:     '三谷産業株式会社では活動報告量が<strong>稼働前月比1.6倍</strong>に増加。蝶理株式会社では<strong>75%のユーザーがSalesforce入力負荷の軽減を実感</strong>し、商談データの蓄積が飛躍的に改善しています。',
-  it:          '株式会社タイミーでは<strong>95.2%のユーザーがSalesforce入力時間を削減</strong>し、約60%で顧客接点時間が増加。株式会社アイティフォーでは活動コメント量が<strong>平均280%に増加</strong>し、隠れた顧客ニーズの発掘につながっています。',
-  manufacturer:'株式会社いけうちでは商談後のSalesforce入力を簡素化し、<strong>フォローアップのスピードが向上</strong>。金属技研株式会社では<strong>Salesforce入力時間50%削減</strong>を実現し、商談中のメモ作業負担が激減。顧客との対話に集中できる環境を構築しています。',
-  other:       '株式会社ブライセンでは商談記録作成時間が<strong>1.5時間→30分（67%削減）</strong>に短縮。株式会社みらいワークスでは上長の商談同席の必要性が減少し、<strong>マネージャーの生産性が向上</strong>した事例があります。',
+  bank:        '<ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:6px"><li>・株式会社肥後銀行：面談記録作成時間 <strong>60分→20分（67%削減）</strong></li><li>・株式会社三十三銀行：面談記録作成時間を <strong>最大60分以上削減</strong></li><li>・株式会社池田泉州銀行：交渉記録の作成負担を解消、全店で客観的かつ網羅的な記録を実現</li></ul>',
+  securities:  '<ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:6px"><li>・ほくほくTT証券株式会社：CRM入力作業を <strong>約30%削減、月間3〜6時間を創出</strong></li><li>・池田泉州TT証券株式会社：面談記録作成時間を大幅削減、顧客接点時間が増加</li></ul>',
+  insurance:   '<ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:6px"><li>・株式会社カカクコム・インシュアランス：顧客記録表の <strong>作成工数を削減</strong>、担当者がお客さまとの対話に集中できる環境を実現</li></ul>',
+  leasing:     '<ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:6px"><li>・三谷産業株式会社：活動報告量が <strong>稼働前月比1.6倍</strong> に増加</li><li>・蝶理株式会社：<strong>75%のユーザーがSalesforce入力負荷の軽減を実感</strong></li></ul>',
+  it:          '<ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:6px"><li>・株式会社タイミー：<strong>95.2%が入力時間を削減、顧客対応時間60%増</strong>を実現</li><li>・株式会社アイティフォー：既存案件の音声ログから隠れたニーズを発掘、<strong>別商材の提案で新規商談を創出</strong></li></ul>',
+  manufacturer:'<ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:6px"><li>・入船鋼材株式会社：訪問後 <strong>3日以内の報告ルールを着実に遵守</strong>、CRMが「生きたデータベース」として機能</li><li>・金属技研株式会社：<strong>Salesforce入力時間50%削減</strong>、商談中のメモ作業負担が激減</li></ul>',
+  other:       '<ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:6px"><li>・株式会社ブライセン：商談記録作成時間 <strong>1.5時間→30分（67%削減）</strong></li><li>・株式会社ネットプロテクションズ：議事録作成時間 <strong>30分→数秒、月間200〜400時間の工数削減</strong>を達成</li></ul>',
 };
 
 function fmtYen(man) {
